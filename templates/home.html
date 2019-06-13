@@ -1,8 +1,19 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% block content %}
     <body>
-<!--nav bar - home, about-->
-<!--welcome heading-->
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item">Home</li>
+                <li class="nav-item">About</li>
+            </ul>
+        </nav>
+    <h1 class="heading">What I've Done</h1>
+    <h2 class="welcome-message">Welcome to What I've Done. Get started by entering a username below.</h2>
+    <form class="username-entry">
+        <input name="username" type="text" placeholder="Enter A Username">
+        <button name="submit">Get Started!</button>
+    </form>
+    
 <!--login - username, and pop up sayig that it is a temporary not secure isername. remember ur username bc 
 no current reset system.-->
     </body>
