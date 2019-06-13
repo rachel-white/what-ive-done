@@ -9,12 +9,19 @@
         </nav>
     <h1 class="heading">What I've Done</h1>
     <h2 class="welcome-message">Welcome to What I've Done. Get started by entering a username below.</h2>
-    <form class="username-entry">
-        <input name="username" type="text" placeholder="Enter A Username">
-        <button name="submit">Get Started!</button>
-    </form>
-    
-<!--login - username, and pop up sayig that it is a temporary not secure isername. remember ur username bc 
-no current reset system.-->
+    <div class="new-user">
+        <form class="username-create">
+            <p class="username-warning">When choosing a username, please use a combination of names and numbers to minimise the chance of a duplicate username.</p>
+            <input name="username" type="text" placeholder="Create Your Username">
+            <button name="submit">Get Started!</button>
+        </form>
+    </div>
+    <div class="enter-account">
+        <p>If you already have an account, enter your username here:</p>
+        <form class="username-enter">
+            <input name="username" type="text" placeholder="Enter Your Username">
+            <button name="submit">Go To Your Account</button>
+        </form>
+    </div>
     </body>
 {% endblock %}
