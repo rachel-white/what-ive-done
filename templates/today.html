@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
+{% block content %}
 <!--heading-->
 <h2>What I've Done</h2>
+
+<nav class="nav">
+    <ul class="nav-list">
+        <li class="nav-item">Home</li>
+        <li class="nav-item">About - Signed In</li>
+        <li class="nav-item">Today</li>
+        <li class="nav-item">History</li>
+    </ul>
+</nav>
 
 <h5>Enter what you've achieved and see your accomplishment thoughout the day.</h5>
 
@@ -12,4 +22,5 @@
     <textarea name="action" placeholder="Enter Your Acheivement"></textarea>
     <i class="fas fa-plus-circle"></i>
 </form>
-<!--plus sign to submit new entry->
+<!--plus sign to submit new entry-->
+{% endblock %}
