@@ -23,12 +23,23 @@
             </div>
         </ul>
     </nav>
-
+<h3>Welcome, {{ userID }}</h3>
 <h5>Enter what you've achieved and see your accomplishment thoughout the day.</h5>
 
-<!--card genrates from database of entries so far from today (previous 00:00-->
-
-<!--entry box for new entry - text area--->
+<div class="day">
+    <div class="list-acheived">
+        <div class="acheivement">
+            <!--Generate from Mongo, each document is a new row -->
+            <div class="time"></div>
+            <div class="achievement-text"></div>
+            <div class="total">
+                <p class="total-acheivements">Total Acheivements So Far Today:</p>
+                <span class="total-acheivements">Generate from mongo, number of achevements with same date</span>
+            </div>
+        </div>
+    </div>
+    
+</div>
 
 <form class="enter-action">
     <textarea name="action" placeholder="Enter Your Achievement"></textarea>
