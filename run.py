@@ -6,7 +6,6 @@ userID = ""
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'wid-dbr'
 # - re-learn about what this line means, then edit as nessacery. app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
-session['userID'] = request.form.get('userID')
 
 @app.route('/')
 def home():
@@ -22,6 +21,7 @@ def aboutsi():
     
 @app.route('/today')
 def today():
+    session['userID'] = request.form.get('userID')
     return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'])
 
 @app.route('/history')
