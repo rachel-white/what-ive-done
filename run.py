@@ -8,9 +8,8 @@ app.config["MONGO_DBNAME"] = 'wid-dbr'
 # - re-learn about what this line means, then edit as nessacery. app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 session['userID'] = request.form.get('userID')
 
-@app.route('/', methods=["GET", "POST"])
+@app.route('/')
 def home():
-    if request.method == "POST":
     return render_template("home.html", title_of_page="Home - What I've Done")
     
     
