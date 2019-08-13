@@ -10,7 +10,7 @@ app.config["MONGO_DBNAME"] = 'wid-dbr'
 @app.route('/', methods=["GET", "POST"])
 def home():
     if request.method == "POST":
-        userID = request.username
+        userID = request.form.username
     return render_template("home.html", title_of_page="userID")
         
 @app.route('/about')
