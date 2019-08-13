@@ -1,12 +1,16 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+
+userID = ""
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'wid-dbr'
 # - re-learn about what this line means, then edit as nessacery. app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
-@app.route('/')
+@app.route('/', methods=["GET", "POST"])
 def home():
+    if request.method == "POST":
+        print(request.username)
     return render_template("home.html", title_of_page="Home - What I've Done")
         
 @app.route('/about')
