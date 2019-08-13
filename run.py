@@ -12,7 +12,6 @@ session['userID'] = request.form.get('userID')
 def home():
     return render_template("home.html", title_of_page="Home - What I've Done")
     
-    
 @app.route('/about')
 def about():
     return render_template("about.html", title_of_page="About - What I've Done")
