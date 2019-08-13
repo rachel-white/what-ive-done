@@ -6,13 +6,14 @@ userID = ""
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'wid-dbr'
 # - re-learn about what this line means, then edit as nessacery. app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
+session['userID'] = request.form.get('userID')
 
 @app.route('/', methods=["GET", "POST"])
 def home():
     if request.method == "POST":
-        userID = request.form.username
-    return render_template("home.html", title_of_page="userID")
-        
+    return render_template("home.html", title_of_page="Home - What I've Done")
+    
+    
 @app.route('/about')
 def about():
     return render_template("about.html", title_of_page="About - What I've Done")
@@ -23,11 +24,11 @@ def aboutsi():
     
 @app.route('/today')
 def today():
-    return render_template("today.html", title_of_page="Today - What I've Done")
+    return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'])
 
 @app.route('/history')
 def history():
-    return render_template("history.html", title_of_page="History - What I've Done")
+    return render_template("history.html", title_of_page="History - What I've Done", userID=session['userID'])
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
