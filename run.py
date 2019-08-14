@@ -19,7 +19,7 @@ def aboutsi():
     
 @app.route('/today', methods=['GET', 'POST'])
 def today():
-    session['userID'] = request.form('username')
+    session['userID'] = request.form["username"]
     return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'])
 
 @app.route('/history')
