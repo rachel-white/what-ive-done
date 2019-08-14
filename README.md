@@ -6,19 +6,19 @@ This project is a productivity website. Instead of a user crossing out tasks the
 
 As a user type, I want to perform an action, so that I can achieve a goal. 
 
-- I want a productivity app that will help me recognise the unpredictable tasks that I acheive each day. 
+- As a self employed worker, I want a productivity app that will help me recognise the unpredictable tasks that I achieve each day, in order to realise and appreciate my progress.  
 
 This website enables a user to add the tasks they have just completed, so accomodates tasks which the user wouldnt have added to their to do list.  
 
-- I want a new kind of productivity app because I havent had success getting motivated with using to do list apps.
+- As a entrepreneur, I want a new kind of productivity app because I havent had success getting motivated with using to do list apps, in order to stay motivated and productive.
 
 What Ive Done is a different style of productivity app so can help someone who wnants a new approach to getting motivated. 
 
-- I want a productivity tool that will measure my progress, rather than showing me how much I have left to do.
+- As a freelancer, I want a additional productivity tool that will measure my progress, rather than showing me how much I have left to do.
 
 Using What Ive Done, a user can see their progress of what they have done, each hour.
 
-- I want to know when I was more and less productive.
+- As a self improvement guru, I want to know when I was more and less productive, by seeing when I acheive more and when less.
 
 What Ive Done records the time someone entered an achievement so a user can see when they were more or less productive.
 
