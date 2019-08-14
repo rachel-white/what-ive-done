@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'wid-dbr'
 # - re-learn about what this line means, then edit as nessacery. app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def home():
     return render_template("home.html", title_of_page="Home - What I've Done")
     
@@ -19,7 +19,7 @@ def about():
 def aboutsi():
     return render_template("aboutsi.html", title_of_page="About - What I've Done")
     
-@app.route('/today')
+@app.route('/today', methods=['GET', 'POST'])
 def today():
     session['userID'] = request.form.get('userID')
     return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'])
