@@ -1,11 +1,10 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <nav class="nav">
             <ul class="nav-list">
-                <li class="nav-item">Home</li>
-                <li class="nav-icon icon"><i class="fas fa-home"></i></li>
-                <li class="nav-item">About & Contact</li>
-                <li class="nav-icon icon"><i class="fas fa-question"></i></li>
+                <li class="nav-item"><a href= "{{ url_for('home') }}" class="link">Home</a></li>
+                <li class="nav-icon icon"><a href= "{{ url_for('home') }}" class="link"><i class="fas fa-home"></i></a></li>
+                <li class="nav-item"><a href= "{{ url_for('about') }}" class="link">About & Contact</a></li>
+                <li class="nav-icon icon"><a href= "{{ url_for('about') }}" class="link"><i class="fas fa-question"></i></a></li>
             </ul>
         </nav>
 <h1>About & Contact</h1>
