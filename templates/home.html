@@ -13,14 +13,14 @@
         <form class="username-create" action="/today" method="POST">
             <p class="username-warning">When choosing a username, please use a combination of names and numbers to minimise the chance of a duplicate username.</p>
             <input id="username" name="username" type="text" placeholder="Create Your Username" required>
-            <button onsubmit="location.href='/today'" name="submit" type="submit" formmethod="POST">Enter</button>
+            <button onsubmit="location.href=&quot;{{ url_for('today') }}&quot;" name="submit" type="submit" formmethod="POST">Enter</button>
         </form>
     </div>
     <div class="enter-account">
         <p>If you already have an account, enter your username here:</p>
         <form class="username-enter" action="/today" method="POST">
             <input id="username" name="username" type="text" placeholder="Enter Your Username" required>
-            <button onsubmit="location.href='/today.'" name="submit" type="submit">Enter</button>
+            <button onsubmit="location.href=&quot;{{ url_for('today') }}&quot;" name="submit" type="submit">Enter</button>
         </form>
     </div>
     </body>
