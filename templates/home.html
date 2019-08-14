@@ -3,8 +3,7 @@
     <body>
         <nav class="nav nav-homepage">
             <div class="nav-section">
-                <li class="nav-item"><a href= "{{ url_for('about') }}" class="link">About & Contact</a></li>
-                <li class="nav-icon icon"><a href= "{{ url_for('about') }}" class="link"><i class="fas fa-question"></i></a></li>
+                <li class="nav-item"><a href= "{{ url_for('about') }}" class="link">About & Contact<i class="fas fa-question"></i></a></li>
             </div>
         </nav>
     <h1 class="heading">What I've Done</h1>
@@ -12,15 +11,15 @@
     <div class="new-user">
         <form class="username-create" action="/today.html" method="POST">
             <p class="username-warning">When choosing a username, please use a combination of names and numbers to minimise the chance of a duplicate username.</p>
-            <input id="username" name="username" type="text" placeholder="Create Your Username">
-            <button onclick="window.location.href='/today.html'" name="submit" type="submit" formmethod="POST">Enter</button>
+            <input id="username" name="username" type="text" placeholder="Create Your Username" required>
+            <button onsubmit="location.href='/today.html'" name="submit" type="submit" formmethod="POST">Enter</button>
         </form>
     </div>
-    <div class="enter-account" action="/today.html" method="POST">
+    <div class="enter-account">
         <p>If you already have an account, enter your username here:</p>
-        <form class="username-enter">
-            <input id="username" name="username" type="text" placeholder="Enter Your Username">
-            <button onclick="window.location.href='/today.html'" name="submit" type="submit">Enter</button>
+        <form class="username-enter" action="/today.html" method="POST">
+            <input id="username" name="username" type="text" placeholder="Enter Your Username" required>
+            <button onsubmit="location.href='/today.html'" name="submit" type="submit">Enter</button>
         </form>
     </div>
     </body>
