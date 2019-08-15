@@ -1,10 +1,14 @@
 import os
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, url_for
+from flask_pymongo import PyMongo
+from bson.objectid import ObjectId
 
 app = Flask(__name__)
-app.config["MONGO_DBNAME"] = 'wid-dbr'
-# - re-learn about what this line means, then edit as nessacery. app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
+app.config["MONGO_DBNAME"] = 'wid-db' #What Ive Done - Database
+app.config["MONGO_URI"] = os.getenv('MONGO_URI')
 
+mongo = PyMongo(app)
+ 
 @app.route('/', methods=['GET', 'POST'])
 def home():
     return render_template("home.html", title_of_page="Home - What I've Done")
