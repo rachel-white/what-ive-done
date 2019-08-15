@@ -25,6 +25,11 @@ def today():
 @app.route('/history')
 def history():
     return render_template("history.html", title_of_page="History - What I've Done", userID=session['userID'])
+    
+@app.route('/signout')
+def signout():
+    session.clear();
+    return render_template("home.html", title_of_page="Home - What I've Done")
 
 if __name__ == '__main__':
     app.secret_key = "SESSIONS_SECRET_KEY"     
