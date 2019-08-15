@@ -1,27 +1,78 @@
 {% extends 'base.html' %}
 {% block content %}
     <body>
-        <nav class="nav nav-homepage">
-            <div class="nav-section">
-                <li class="nav-item"><a href= "{{ url_for('about') }}" class="link">About & Contact<i class="fas fa-question"></i></a></li>
+        <div class="container">
+            <div class="row">
+                <div class="col-2 offset-10">
+                    <nav class="nav nav-homepage">
+                        <div class="nav-section">
+                            <li class="nav-item"><a href= "{{ url_for('about') }}" class="link">About & Contact<i class="fas fa-question"></i></a></li>
+                        </div>
+                    </nav>
+                </div>
             </div>
-        </nav>
-    <h1 class="heading">What I've Done</h1>
-    <h2 class="welcome-message">Welcome to What I've Done.</h2>
-    <p>Get started by entering a username below.</p>
-    <div class="new-user">
-        <form class="username-create" action="/today" method="POST">
-            <p class="username-warning">When choosing a username, please use a combination of names and numbers to minimise the chance of a duplicate username.</p>
-            <input id="username" name="username" type="text" placeholder="Create Your Username" required>
-            <button onsubmit="location.href=&quot;{{ url_for('today') }}&quot;" name="submit" type="submit" formmethod="POST">Enter</button>
-        </form>
+        </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h1 class="heading home-message">What I've Done</h1>
+        </div>
     </div>
-    <div class="enter-account">
-        <p>If you already have an account, enter your username here:</p>
-        <form class="username-enter" action="/today" method="POST">
-            <input id="username" name="username" type="text" placeholder="Enter Your Username" required>
-            <button onsubmit="location.href=&quot;{{ url_for('today') }}&quot;" name="submit" type="submit">Enter</button>
-        </form>
+    <div class="row">
+        <div class="col-10 offset-1">
+            <h2 class="welcome-message home-message">Welcome to What I've Done.</h2>
+        </div>
     </div>
-    </body>
+    <div class="row">
+        <div class="col-8 offset-2">
+             <p class="home-message">Get started by entering a username below.</p>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-12">
+                <form class="username-create" action="/today" method="POST">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="username-warning">When choosing a username, please use a combination of names and numbers to minimise the chance of a duplicate username.</p>
+                            </div>
+                            <div class="col-4 offset-2">
+                                <input id="username" name="username" type="text" placeholder="Create Your Username" required>
+                            </div>
+                            <div class="col-2">
+                                <button onsubmit="location.href=&quot;{{ url_for('today') }}&quot;" name="submit" type="submit" formmethod="POST">Enter</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-10 offset-1"><p>If you already have an account, enter your username here:</p></div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form class="username-enter" action="/today" method="POST">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4 offset-2">
+                                <input id="username" name="username" type="text" placeholder="Enter Your Username" required>
+                            </div>
+                            <div class="col-2">
+                                <button onsubmit="location.href=&quot;{{ url_for('today') }}&quot;" name="submit" type="submit">Enter</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
 {% endblock %}
