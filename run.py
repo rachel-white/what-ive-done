@@ -4,8 +4,8 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
 app = Flask(__name__)
-app.config["MONGO_DBNAME"] = 'wid-db' #What Ive Done - Database
-app.config["MONGO_URI"] = os.getenv('MONGO_URI')
+app.config["MONGO_DBNAME"] = 'wid' #What Ive Done - Database
+app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost') #Ask tutoring at some point about what the second part means / is. 
 
 mongo = PyMongo(app)
  
@@ -23,7 +23,7 @@ def aboutsi():
     
 @app.route('/add_task', methods=['GET', 'POST'])
 def add_task():
-    achievements = mongo.wid.acheivements
+    achievements = mongo.wid.achievements #wid is the database name, acheivements is the collection name
     acheivements.insert_one({ "Testing" : "Test"})
     return render_template("today.html", title_of_page="addedtask", userID=session['userID'])
     #add acheivemnet
