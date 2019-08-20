@@ -21,9 +21,19 @@ def about():
 def aboutsi():
     return render_template("aboutsi.html", title_of_page="About - What I've Done")
     
+@app.route('/add_task', methods=['GET', 'POST'])
+def add_task():
+    achievements = mongo.wid.acheivements
+    acheivements.insert_one({ "Testing" : "Test"})
+    return render_template("today.html", title_of_page="addedtask", userID=session['userID'])
+    #add acheivemnet
+    #add time stamp for when it was added
+    #with username
+    
+    
 @app.route('/today', methods=['GET', 'POST'])
 def today():
-    session['userID'] = request.form["username"]
+    session['userID'] = request.form["username"] #stores username as userID
     return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'])
 
 @app.route('/history')
