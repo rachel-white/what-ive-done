@@ -6,7 +6,7 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'wid' #What Ive Done - Database
 #app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost') #Ask tutoring at some point about what the second part means / is. 
-app.config["MONGO_URI"] ="mongodb+srv://adminuser:adminuser@what-ive-done-1amsw.mongodb.net/wid?retryWrites=true&w=majority"
+app.config["MONGO_URI"] ="mongodb+srv://adminuser:bonjour123@what-ive-done-1amsw.mongodb.net/wid?retryWrites=true&w=majority"
 mongo = PyMongo(app)
  
 @app.route('/', methods=['GET', 'POST'])
