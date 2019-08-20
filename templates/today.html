@@ -25,22 +25,22 @@
 <h5>Enter what you've achieved and see your accomplishment thoughout the day.</h5>
 
 <div class="day">
-    <div class="list-acheived">
-        <div class="acheivement">
+    <div class="list-achieved">
+        <div class="achievement">
             <!--Generate from Mongo, each document is a new row -->
             <div class="time"></div>
             <div class="achievement-text"></div>
             <div class="total">
-                <p class="total-acheivements">Total Acheivements So Far Today:</p>
-                <span class="total-acheivements">Generate from mongo, number of achevements with same date</span>
+                <p class="total-achievements">Total Achievements So Far Today:</p>
+                <span class="total-achievements">Generate from mongo, number of achevements with same date</span>
             </div>
         </div>
     </div>
     
 </div>
 
-<form class="enter-acheivement">
-    <textarea name="achievement" placeholder="Enter Your Achievement"></textarea>
-    <button onclick="" class="submit-button">+</button>
+<form class="enter-achievement" action="/add_achievement" method="POST">
+    <textarea name="achievement" placeholder="Enter Your Achievement" required></textarea>
+    <button class="submit-button">+</button>
 </form>
 {% endblock %}
