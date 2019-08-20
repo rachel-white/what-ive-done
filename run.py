@@ -5,8 +5,8 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'wid' #What Ive Done - Database
-app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost') #Ask tutoring at some point about what the second part means / is. 
-
+#app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost') #Ask tutoring at some point about what the second part means / is. 
+app.config["MONGO_URI"] ="mongodb+srv://adminuser:adminuserpassword@what-ive-done-1amsw.mongodb.net/wid?retryWrites=true&w=majority"
 mongo = PyMongo(app)
  
 @app.route('/', methods=['GET', 'POST'])
@@ -23,13 +23,14 @@ def aboutsi():
     
 @app.route('/add_task', methods=['GET', 'POST'])
 def add_task():
-    achievements = mongo.wid.achievements #wid is the database name, acheivements is the collection name
-    acheivements.insert_one({ "Testing" : "Test"})
-    return render_template("today.html", title_of_page="addedtask", userID=session['userID'])
+    #achievements = mongo.wid.achievements #wid is the database name, acheivements is the collection name
+    #acheivements.insert_one({ "Testing" : "Test"})
+    #return render_template("today.html", title_of_page="addedtask", userID=session['userID'])
     #add acheivemnet
     #add time stamp for when it was added
     #with username
-    
+    obj = {'foo':'bar'}
+    mongo.db.achievements.insert_one(obj)
     
 @app.route('/today', methods=['GET', 'POST'])
 def today():
