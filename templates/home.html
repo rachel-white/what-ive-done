@@ -50,6 +50,7 @@
                             </div>
                             <div class="col-2">
                                 <button onsubmit="location.href=&quot;{{ url_for('today') }}&quot;" name="submit" type="submit" formmethod="POST">Enter</button>
+                                <!--Button onsubmit href uses &quot; because triple nesting quotes - and &quot; needs to be outside the jinja-->
                             </div>
                         </div>
                     </div>
