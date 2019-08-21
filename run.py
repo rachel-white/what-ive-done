@@ -1,12 +1,11 @@
 import os
-from flask import Flask, render_template, request, session, url_for
+from flask import Flask, render_template, request, session, url_for, redirect
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'wid' #What Ive Done - Database
-#app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost') #Ask tutoring at some point about what the second part means / is. 
-app.config["MONGO_URI"] ="mongodb+srv://adminuser:bonjour123@what-ive-done-1amsw.mongodb.net/wid?retryWrites=true&w=majority"
+app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost') #Ask tutoring at some point about what the second part means / is. 
 mongo = PyMongo(app)
  
 @app.route('/', methods=['GET', 'POST'])
@@ -23,20 +22,18 @@ def aboutsi():
     
 @app.route('/add_achievement', methods=['GET', 'POST'])
 def add_achievement():
-    #achievements = mongo.wid.achievements #wid is the database name, acheivements is the collection name
-    #acheivements.insert_one({ "Testing" : "Test"})
-    #return render_template("today.html", title_of_page="addedtask", userID=session['userID'])
-    #add acheivemnet
-    #add time stamp for when it was added
-    #with username
     achievement = request.form["achievement"]
     user = session['userID']
-    #time = 
+    #session['userID'] = request.form["username"]
+   # time = 
     record = {'user': user, 'achievement': achievement }
     mongo.db.achievements.insert_one(record)
+    #working on adding time 
+    #return(time)
+    
     #obj = {'foo':'bar'}
-   ## mongo.db.achievements.insert_one(obj)
-    return render_template("today.html", title_of_page="addedtask", userID=session['userID'])
+   # mongo.db.achievements.insert_one(obj)
+    return redirect(url_for('today'))
     
 @app.route('/today', methods=['GET', 'POST'])
 def today():
