@@ -33,7 +33,8 @@ def add_achievement():
     
     #obj = {'foo':'bar'}
    # mongo.db.achievements.insert_one(obj)
-    return redirect(url_for('today'))
+    #return redirect(url_for('today'))
+    return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'])
     
 @app.route('/today', methods=['GET', 'POST'])
 def today():
