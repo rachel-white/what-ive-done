@@ -24,17 +24,14 @@ def aboutsi():
 def add_achievement():
     achievement = request.form["achievement"]
     user = session['userID']
-    #session['userID'] = request.form["username"]
-   # time = 
-    record = {'user': user, 'achievement': achievement }
+    #time = 
+    record = {'user': user, 'achievement': achievement}
     mongo.db.achievements.insert_one(record)
-    #working on adding time 
-    #return(time)
     
     #obj = {'foo':'bar'}
    # mongo.db.achievements.insert_one(obj)
-    #return redirect(url_for('today'))
-    return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'])
+    return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID']) 
+    ## Explanation: render_template not redirect, because redirect caused issues with the username session variable.
     
 @app.route('/today', methods=['GET', 'POST'])
 def today():
