@@ -1,9 +1,5 @@
 /* file is correctly linked to base.html */
 
-h1 h2 h3 h4{
-    color: green;
-}
-
-.body {
-    background-color:yellow;
+body {
+    color: pink;
 }
