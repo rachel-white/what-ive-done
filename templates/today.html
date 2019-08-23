@@ -41,6 +41,8 @@
 
 <form class="enter-achievement" action="/add_achievement" method="POST">
     <textarea name="achievement" placeholder="Enter Your Achievement" required></textarea>
-    <button class="submit-button">+</button>
+    <button onclick="getTime()" class="submit-button">+</button>
 </form>
+<script type="text/javascript" src="{{
+  url_for('static', filename='js/today.js') }}"></script>
 {% endblock %}
