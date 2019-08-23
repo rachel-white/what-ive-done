@@ -86,3 +86,9 @@ Media
 The photos used in this site were obtained from ...
 Acknowledgements
 I received inspiration for this project from X
+
+
+Note somewhere about:
+any passwrods commited to github were because of debuggingwith CI, have been changed now
+
+Deployed version has open access 0.0.0.0. etcin order that testers can view it. //acgtually i guess i need to check with tutors what i would actually do about that!
