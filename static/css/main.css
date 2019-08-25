@@ -1,5 +1,31 @@
-/* file is correctly linked to base.html */
-
+/*Fonts*/
+@import url("https://fonts.googleapis.com/css?family=Bitter|Lexend+Deca&display=swap");
+/*Colours: */
+/*Add tints for all these colors, for shadows / accents within the section / hover / etc. */
+/*CSS Styling: Overall rules for fonts, colors, footer. */
 body {
-    color: pink;
-}
+  background-color: #0E34A0; }
+
+h1, h2, h3, h4, h5, h6, p {
+  color: #474350;
+  background-color: #F3F9D2;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lexend Deca", sans-serif; }
+
+p, span, footer {
+  font-family: "Bitter", serif; }
+
+footer {
+  background-color: #3D52D5;
+  margin-top: 20px;
+  padding-top: 20px; }
+
+.footer-icon {
+  background-color: #F3F9D2;
+  color: #474350; }
+
+/*# sourceMappingURL=main.css.map */
