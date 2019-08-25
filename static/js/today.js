@@ -18,7 +18,7 @@
         //}); 
 
 $(document).ready(function() { 
-          $("p").click(function(event) { 
+          $(".click-for-time").click(function(event) { 
              $(".time-add-to-db").text(event.timeStamp); 
          }); 
       }); 
