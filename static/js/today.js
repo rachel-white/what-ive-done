@@ -21,7 +21,7 @@ $(document).ready(function() {
           $(".click-for-time").click(function(event) {
               var date = new Date(event.timeStamp);
               var time = date.getTime()
-             $(".time-add-to-db").text(event.timeStamp + date + "time:" + time); 
-              document.getElementById('time').value= (time + "this is the adding to value section");
+             $(".time-add-to-db").text= (event.timeStamp + date + "time:" + time);
+              document.getElementById('time').value=(time + "this is the adding to value section");
          }); 
       }); 
