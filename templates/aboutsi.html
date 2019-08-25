@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
+
+ {% block styling %}
+       <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% endblock %}
+    
+    
 {% block content %}
 
     <nav class="nav">
