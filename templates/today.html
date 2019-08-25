@@ -28,7 +28,7 @@
     <div class="list-achieved">
         <div class="achievement">
             <!--Generate from Mongo, each document is a new row -->
-            <div class="time"></div>
+            <div class="time-from-db"></div>
             <div class="achievement-text"></div>
             <div class="total">
                 <p class="total-achievements">Total Achievements So Far Today:</p>
@@ -45,8 +45,15 @@
     <button onclick="getTime()" class="submit-button">+</button>
 </form>
 
-<div class="time" name="time">This is the time div</div>
-    <button onclick="getTime()">Get Time Button</button>
-<script type="text/javascript" src="{{
-  url_for('static', filename='js/today.js') }}"></script>
+<div class="time-add-to-db" name="time">This is the time div</div>
+    <button class="click-for-time">Get Time Button</button>
+    
+<div> 
+    <!-- click on this paragraph -->
+    <p>The click event occurred <span style="color:green">unknown</span> 
+            milliseconds after January 1, 1970.</p> 
+</div>
+    
+<script type="text/javascript" src="{{ url_for('static', filename='js/today.js') }}"></script>
 {% endblock %}
+
