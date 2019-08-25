@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
-{% block styling %}
-   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block styling %}
+       <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     {% endblock %}
 
 {% block content %}
@@ -20,18 +20,13 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-8 offset-2">
+        <div class="col-11">
             <h1 class="heading home-message">What I've Done</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-10 offset-1">
-            <h2 class="welcome-message home-message">Welcome to What I've Done.</h2>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-8 offset-2">
-             <p class="home-message">Get started by entering a username below.</p>
+            <p class="welcome-message home-message">Welcome to What I've Done. <br/> Get started by entering a username below. </p>
         </div>
     </div>
 </div>
