@@ -18,7 +18,8 @@
         //}); 
 
 $(document).ready(function() { 
-          $(".click-for-time").click(function(event) { 
-             $(".time-add-to-db").text(event.timeStamp); 
+          $(".click-for-time").click(function(event) {
+              var date = new Date(event.timeStamp);
+             $(".time-add-to-db").text(event.timeStamp + "" + date); 
          }); 
       }); 
