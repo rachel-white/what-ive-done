@@ -1,0 +1,46 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Bitter|Lexend+Deca&display=swap');
+$sans-serif: 'Lexend Deca', sans-serif;
+$serif: 'Bitter', serif;
+
+/*Colours: */
+
+$dark-blue: #0E34A0;
+$light-blue: #3D52D5;
+$accent-green: #64DB3F;
+$background-pale: #F3F9D2;
+$text-dark: #474350;
+/*Add tints for all these colors, for shadows / accents within the section / hover / etc. */
+
+/*CSS Styling: Overall rules for fonts, colors, footer. */
+
+body {
+    background-color: $dark-blue;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color:$text-dark;
+    background-color: $background-pale;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $sans-serif;
+}
+
+p, span, footer {
+    font-family: $serif;
+}
+
+footer {
+    background-color: $light-blue;
+    margin-top:20px;
+    padding-top:20px;
+}
+
+.footer-icon {
+    background-color: $background-pale;
+    color:$text-dark;
+}
