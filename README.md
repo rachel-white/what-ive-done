@@ -92,3 +92,8 @@ Note somewhere about:
 any passwrods commited to github were because of debuggingwith CI, have been changed now
 
 Deployed version has open access 0.0.0.0. etcin order that testers can view it. //acgtually i guess i need to check with tutors what i would actually do about that!
+
+### Color Scheme
+Using Coolors. (https://coolors.co/)
+font - using google fonts - https://fonts.google.com/
+css - using sass preprocesssor
