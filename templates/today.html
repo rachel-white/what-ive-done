@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
+
+ {% block styling %}
+       <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% endblock %}
+    
+
 {% block content %}
 <!--heading-->
 <h2>What I've Done</h2>
@@ -41,19 +47,13 @@
 
 <form class="enter-achievement" action="/add_achievement" method="POST">
     <textarea name="achievement" placeholder="Enter Your Achievement" required></textarea>
+    <input type="text" id="time" name="time" value=""/>
     <div class="time" name="time"></div>
-    <button onclick="getTime()" class="submit-button">+</button>
+    <button class="submit-button">+</button>
 </form>
 
 <div class="time-add-to-db" name="time">This is the time div</div>
     <button class="click-for-time">Get Time Button</button>
-    
-<div> 
-    <!-- click on this paragraph -->
-    <p>The click event occurred <span style="color:green">unknown</span> 
-            milliseconds after January 1, 1970.</p> 
-</div>
-    
 <script type="text/javascript" src="{{ url_for('static', filename='js/today.js') }}"></script>
 {% endblock %}
 
