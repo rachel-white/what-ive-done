@@ -25,7 +25,8 @@ def add_achievement():
     achievement = request.form["achievement"]
     user = session['userID']
     time = request.form["time"]
-    record = {'user': user, 'achievement': achievement, 'time': time} 
+    date =request.form["date"]
+    record = {'user': user, 'achievement': achievement, 'time': time, 'date': date} 
     mongo.db.achievements.insert_one(record)
     
     #obj = {'foo':'bar'}
