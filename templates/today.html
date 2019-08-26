@@ -47,12 +47,13 @@
 
 <form class="enter-achievement" action="/add_achievement" method="POST">
     <textarea name="achievement" placeholder="Enter Your Achievement" required></textarea>
-    <input type="text" id="time" name="time" value=""/>
+    <input type="text" id="time" name="time" class="hide" value=""/>
+    <input type="text" id="date" name="date" class="hide" value=""/>
     <div class="time" name="time"></div>
     <button class="submit-button">+</button>
 </form>
 
-<div class="time-add-to-db" name="time">This is the time div</div>
+<div class="time-add-to-db">This is the time div</div>
     <button class="click-for-time">Get Time Button</button>
 <script type="text/javascript" src="{{ url_for('static', filename='js/today.js') }}"></script>
 {% endblock %}
