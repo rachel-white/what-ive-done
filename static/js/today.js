@@ -1,13 +1,12 @@
-$(document).ready(function() { 
-          $(".click-for-time").click(function(event) {
-              var timestamp = new Date(event.timeStamp);
-              var date = timestamp.toDateString()
-              var time = timestamp.toTimeString()
+function generateTime(event) {
+              var timestamp = new Date();
+              var date = timestamp.toDateString();
+              var hourtime = timestamp.getHours();
+              var minstime = timestamp.getMinutes();
+              var secondstime = timestamp.getSeconds();
+              var time = (hourtime + ":" + minstime +  ":" + secondstime); 
+              console.log("time: " + time)
              $(".time-add-to-db").text(timestamp + "date: " + date + " " + "time: " + time);
-             console.log("timestamp:" + timestamp)
-             console.log(date + "date")
-             console.log(time + "time")
-              document.getElementById('time').value=(time + "time var");
-              document.getElementById('date').value=(date + "date var");
-         }); 
-      }); 
+              document.getElementById('time').value=(time);
+              document.getElementById('date').value=(date);
+         }; 
