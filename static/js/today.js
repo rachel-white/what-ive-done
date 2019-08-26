@@ -23,6 +23,7 @@ $(document).ready(function() {
               var date = timestamp.toDateString()
               var time = timestamp.toTimeString()
              $(".time-add-to-db").text(timestamp + "date: " + date + " " + "time: " + time);
-              document.getElementById('time').value=(time + "this is the adding to value section");
+              document.getElementById('time').value=(time + "time var");
+              document.getElementById('date').value=(date + "date var");
          }); 
       }); 
