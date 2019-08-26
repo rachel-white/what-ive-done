@@ -28,4 +28,9 @@ footer {
   background-color: #F3F9D2;
   color: #474350; }
 
+.about-and-contact {
+  position: absolute;
+  top: 20px;
+  right: 20px; }
+
 /*# sourceMappingURL=main.css.map */
