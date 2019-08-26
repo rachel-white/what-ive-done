@@ -37,7 +37,7 @@ def add_achievement():
 @app.route('/today', methods=['GET', 'POST'])
 def today():
     session['userID'] = request.form["username"] #stores username as userID
-    return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'])
+    return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'], achievements=mongo.db.achievements.find())
 
 @app.route('/history')
 def history():
