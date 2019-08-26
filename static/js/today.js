@@ -19,9 +19,10 @@
 
 $(document).ready(function() { 
           $(".click-for-time").click(function(event) {
-              var date = new Date(event.timeStamp);
-              var time = date.getTime()
-             $(".time-add-to-db").text(event.timeStamp + "date: " + date + " " + "time: " + time);
+              var timestamp = new Date(event.timeStamp);
+              var date = timestamp.toDateString()
+              var time = timestamp.toTimeString()
+             $(".time-add-to-db").text(timestamp + "date: " + date + " " + "time: " + time);
               document.getElementById('time').value=(time + "this is the adding to value section");
          }); 
       }); 
