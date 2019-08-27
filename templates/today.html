@@ -34,7 +34,6 @@
     <div class="list-achieved">
         <div class="total">
                 <p class="total-achievements">Total Achievements So Far Today:</p>
-                <span class="total-achievements">Generate from mongo, number of achevements with same date</span>
             </div>
         <div class="achievement">
             {% for achievement in achievements %}
@@ -54,9 +53,6 @@
     <div class="time" name="time"></div>
     <button onclick="generateTime()" class="submit-button">+</button>
 </form>
-
-<div class="time-add-to-db">This is the time div</div>
-    <button class="click-for-time">Get Time Button</button>
 <script type="text/javascript" src="{{ url_for('static', filename='js/today.js') }}"></script>
 {% endblock %}
 
