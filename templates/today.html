@@ -32,15 +32,15 @@
 
 <div class="day">
     <div class="list-achieved">
-        <div class="achievement">
-            {% for acheivement in acheivements %}
-            <!--Generate from Mongo, each document is a new row -->
-            <div class="time-from-db">{{achievement.time}}</div>
-            <div class="achievement-text">{{achievement.achievement}}</div>
-            <div class="total">
+        <div class="total">
                 <p class="total-achievements">Total Achievements So Far Today:</p>
                 <span class="total-achievements">Generate from mongo, number of achevements with same date</span>
             </div>
+        <div class="achievement">
+            {% for achievement in achievements %}
+            <!--Generate from Mongo, each document is a new row -->
+            <div class="time-from-db">{{achievement.time}}</div>
+            <div class="achievement-text">{{achievement.achievement}}</div>
             {% endfor %}
         </div>
     </div>
