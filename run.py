@@ -2,6 +2,10 @@ import os
 from flask import Flask, render_template, request, session, url_for, redirect
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from datetime import datetime
+
+
+todaydate = datetime.today().strftime(%a + "" + %b + "" + %d + "" + %Y)
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'wid' #What Ive Done - Database
@@ -28,16 +32,15 @@ def add_achievement():
     date =request.form["date"]
     record = {'user': user, 'achievement': achievement, 'time': time, 'date': date} 
     mongo.db.achievements.insert_one(record)
-    
-    #obj = {'foo':'bar'}
-   # mongo.db.achievements.insert_one(obj)
     return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID']) 
     ## Explanation: render_template not redirect, because redirect caused issues with the username session variable.
     
 @app.route('/today', methods=['GET', 'POST'])
 def today():
+    date = request.form["date"]
     session['userID'] = request.form["username"] #stores username as userID
-    return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'], achievements=mongo.db.achievements.find({"user": session['userID']}))
+    return(todaydate)
+   # return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'], achievements=mongo.db.achievements.find({"user": session['userID'], "date": date}))
 
 @app.route('/history')
 def history():
