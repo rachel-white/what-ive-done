@@ -28,7 +28,7 @@
         </ul>
     </nav>
 <h3>Welcome, {{ userID }}</h3>
-<h5>Enter what you've achieved and see your accomplishment thoughout the day.</h5>
+<p>Enter what you've achieved and see your accomplishment thoughout the day.</p>
 
 <div class="day">
     <div class="list-achieved">
@@ -38,8 +38,16 @@
         <div class="achievement">
             {% for achievement in achievements %}
             <!--Generate from Mongo, each document is a new row -->
-            <div class="time-from-db">{{achievement.time}}</div>
-            <div class="achievement-text">{{achievement.achievement}}</div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="time-from-db">{{achievement.time}}</div>
+                    </div>
+                    <div class="col-7">
+                        <div class="achievement-text">{{achievement.achievement}}</div>
+                    </div>
+                </div>
+            </div>
             {% endfor %}
         </div>
     </div>
