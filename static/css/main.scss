@@ -1,7 +1,8 @@
 /*Fonts*/
-@import url('https://fonts.googleapis.com/css?family=Bitter|Lexend+Deca&display=swap');
-$sans-serif: 'Lexend Deca', sans-serif;
-$serif: 'Bitter', serif;
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+$title-font: 'Lexend Deca', sans-serif;
+$content-font: 'Dosis', sans-serif;
 
 /*Colours: */
 
@@ -28,11 +29,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $sans-serif;
+    font-family: $title-font;
 }
 
 p, span, footer {
-    font-family: $serif;
+    font-family: $content-font;
 }
 
 footer {
@@ -61,4 +62,6 @@ footer {
 
 .time-from-db, .achievement-text {
     background-color:$bpt;
+    font-family: $content-font;
+    margin:10px;
 }
