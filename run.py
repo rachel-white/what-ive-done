@@ -39,7 +39,7 @@ def today():
 
 @app.route('/history')
 def history():
-    return render_template("history.html", title_of_page="History - What I've Done", userID=session['userID'], achievements=mongo.db.achievements.find({"user": session['userID']})
+    return render_template("history.html", title_of_page="History - What I've Done", userID=session['userID'], achievements=mongo.db.achievements.find({"user": session['userID']}))
     
 @app.route('/signout')
 def signout():
