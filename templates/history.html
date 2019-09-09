@@ -33,13 +33,24 @@
 <h3>Here are your previous acheivements, {{ userID }}</h3>
     <div class="history history-page">
         <div class="history date">
-            <div class="history list-acheived">
-                <div class="history acheivement">
+            {% for date in history %}
+                <div class="history date-history">
                     <!--Generate from Mongo, each document is a new row -->
-                    <div class="history time"></div>
-                    <div class="history achievement-text"></div>
+                    {% for achievement in achievements %}
+                    <!--Generate from Mongo, each document is a new row -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="time-from-db">{{achievement.time}}</div>
+                            </div>
+                        <div class="col-7">
+                            <div class="achievement-text">{{achievement.achievement}}</div>
+                        </div>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
+            {% endfor %}
         </div>
     </div>
         
