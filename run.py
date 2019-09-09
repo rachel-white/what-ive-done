@@ -4,12 +4,9 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from datetime import datetime
 
-
-todaydate = datetime.today().strftime(%a + "" + %b + "" + %d + "" + %Y)
-
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'wid' #What Ive Done - Database
-app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost') #Ask tutoring at some point about what the second part means / is. 
+app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 mongo = PyMongo(app)
  
 @app.route('/', methods=['GET', 'POST'])
@@ -37,14 +34,12 @@ def add_achievement():
     
 @app.route('/today', methods=['GET', 'POST'])
 def today():
-    date = request.form["date"]
     session['userID'] = request.form["username"] #stores username as userID
-    return(todaydate)
-   # return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'], achievements=mongo.db.achievements.find({"user": session['userID'], "date": date}))
+    return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'], achievements=mongo.db.achievements.find({"user": session['userID']}))
 
 @app.route('/history')
 def history():
-    return render_template("history.html", title_of_page="History - What I've Done", userID=session['userID'])
+    return render_template("history.html", title_of_page="History - What I've Done", userID=session['userID'], achievements=mongo.db.achievements.find({"user": session['userID']})
     
 @app.route('/signout')
 def signout():
