@@ -6,7 +6,7 @@ function generateTime(event) {
               var secondstime = timestamp.getSeconds();
               var time = (hourtime + ":" + minstime +  ":" + secondstime); 
               console.log("time: " + time)
-             $(".time-add-to-db").text(timestamp + "date: " + date + " " + "time: " + time);
               document.getElementById('time').value=(time);
               document.getElementById('date').value=(date);
          }; 
+         
