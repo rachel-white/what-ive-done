@@ -10,18 +10,14 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 mongo = PyMongo(app)
 
 now = datetime.now() # current date and time
+day_name = now.strftime("%a")
+month_name = now.strftime("%b") 
+day_in_month = now.strftime("%d")
 year = now.strftime("%Y")
-print("year:", year)
-month = now.strftime("%m")
-print("month:", month)
-day = now.strftime("%d")
-print("day:", day)
-time = now.strftime("%H:%M:%S")
-print("time:", time)
-date_time = now.strftime("%m/%d/%Y, %H:%M:%S")
-print("date and time:",date_time)	
+today = day_name + " " + month_name + ":" + day_in_month + ":" + year
+print(today)
+#date "Mon Aug 26 2019"
 
- 
 @app.route('/', methods=['GET', 'POST'])
 def home():
     return render_template("home.html", title_of_page="Home - What I've Done")
@@ -48,7 +44,7 @@ def add_achievement():
 @app.route('/today', methods=['GET', 'POST'])
 def today():
     session['userID'] = request.form["username"] #stores username as userID
-    return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'], achievements=mongo.db.achievements.find({"user": session['userID']}))
+    return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'], achievements=mongo.db.achievements.find({"user": session['userID'], "date": today}))
 
 @app.route('/history')
 def history():
