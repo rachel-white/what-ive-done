@@ -14,9 +14,10 @@ day_name = now.strftime("%a")
 month_name = now.strftime("%b") 
 day_in_month = now.strftime("%d")
 year = now.strftime("%Y")
-today = day_name + " " + month_name + ":" + day_in_month + ":" + year
-print(today)
+today_date = day_name + " " + month_name + " " + day_in_month + " " + year
+print(today_date)
 #date "Mon Aug 26 2019"
+#today_date: Tue Sep:17:2019
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -44,7 +45,7 @@ def add_achievement():
 @app.route('/today', methods=['GET', 'POST'])
 def today():
     session['userID'] = request.form["username"] #stores username as userID
-    return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'], achievements=mongo.db.achievements.find({"user": session['userID'], "date": today}))
+    return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'], achievements=mongo.db.achievements.find({"user": session['userID'], "date": today_date}))
 
 @app.route('/history')
 def history():
