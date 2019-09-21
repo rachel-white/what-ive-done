@@ -39,14 +39,14 @@ def add_achievement():
     date =request.form["date"]
     record = {'user': user, 'achievement': achievement, 'time': time, 'date': date} 
     mongo.db.achievements.insert_one(record)
-    return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID']) 
+    return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'], achievements=mongo.db.achievements.find({"user": session['userID'], "date": today_date})) 
     ## Explanation: render_template not redirect, because redirect caused issues with the username session variable.
     
 @app.route('/today', methods=['GET', 'POST'])
 def today():
     session['userID'] = request.form["username"] #stores username as userID
     #return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'], achievements=mongo.db.achievements.find({"user": session['userID'], "date": today_date}))
-    return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'], achievements=mongo.db.achievements.find({"user": session['userID']}))
+    return render_template("today.html", title_of_page="Today - What I've Done", userID=session['userID'], achievements=mongo.db.achievements.find({"user": session['userID'], "date": today_date}))
 
 @app.route('/history')
 def history():
