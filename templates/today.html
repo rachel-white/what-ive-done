@@ -8,7 +8,7 @@
 {% block content %}
 <!--heading-->
 <h2>What I've Done</h2>
-<nav class="nav">
+<nav class="nav navbar">
         <ul class="nav-list">
             <div class="nav-section">
                 <li class="nav-item"><a href= "{{ url_for('home') }}" class="link">Home<i class="fas fa-home"></i></a></li>
@@ -27,13 +27,27 @@
             </div>
         </ul>
     </nav>
-<h3>Welcome, {{ userID }}</h3>
-<p>Enter what you've achieved and see your accomplishment thoughout the day.</p>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12"><h3>Welcome, {{ userID }}</h3></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="offset-1 col-10"><p>Enter what you've achieved and see your accomplishment thoughout the day.</p></div>
+        </div>
+    </div>
 
 <div class="day">
     <div class="list-achieved">
         <div class="total">
-                <p class="total-achievements">Total Achievements So Far Today:</p>
+            <div class="container">
+                <div class="row">
+                    <div class="offset-2 col-8"><p class="total-achievements">Total Achievements So Far Today:</p></div>
+                </div>
+            </div>
+                
             </div>
         <div class="achievement">
             {% for achievement in achievements %}
@@ -43,7 +57,7 @@
                     <div class="col-3">
                         <div class="time-from-db">{{achievement.time}}</div>
                     </div>
-                    <div class="col-7">
+                    <div class="col-9">
                         <div class="achievement-text">{{achievement.achievement}}</div>
                     </div>
                 </div>
