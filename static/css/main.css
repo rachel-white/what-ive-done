@@ -1,6 +1,8 @@
 /*Fonts*/
-@import url("https://fonts.googleapis.com/css?family=Bitter|Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Dosis&display=swap");
 /*Colours: */
+/*Background pale tint*/
 /*Add tints for all these colors, for shadows / accents within the section / hover / etc. */
 /*CSS Styling: Overall rules for fonts, colors, footer. */
 body {
@@ -17,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Lexend Deca", sans-serif; }
 
 p, span, footer {
-  font-family: "Bitter", serif; }
+  font-family: "Dosis", sans-serif; }
 
 footer {
   background-color: #3D52D5;
@@ -34,6 +36,13 @@ footer {
   right: 20px; }
 
 .hide {
-  visibility: hidden; }
+  visibility: hidden;
+  height: 0px; }
+
+/*Today Page: */
+.time-from-db, .achievement-text {
+  background-color: #CEF8FA;
+  font-family: "Dosis", sans-serif;
+  margin: 10px; }
 
 /*# sourceMappingURL=main.css.map */
