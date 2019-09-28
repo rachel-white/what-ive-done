@@ -33,7 +33,7 @@
 <h3>Here are your previous acheivements, {{ userID }}</h3>
     <div class="history history-page">
         <div class="history date">
-            {% for date in history %}
+            {% for hist in history %}
                 <div class="history date-history">
                     <!--Generate from Mongo, each document is a new row -->
                     {% for achievement in achievements %}
