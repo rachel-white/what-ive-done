@@ -36,19 +36,22 @@
             {% for hist in history %}
                 <div class="history date-history">
                     <!--Generate from Mongo, each document is a new row -->
-                    {% for achievement in achievements %}
+                   <!--  {% for achievement in hist %} -->
                     <!--Generate from Mongo, each document is a new row -->
                     <div class="container">
                         <div class="row">
                             <div class="col-3">
-                                <div class="time-from-db">{{achievement.time}}</div>
+                                <div class="achievement-text">{{hist.date}}</div>
                             </div>
-                        <div class="col-7">
-                            <div class="achievement-text">{{achievement.achievement}}</div>
+                            <div class="col-3">
+                                <div class="time-from-db">{{hist.time}}</div>
+                            </div>
+                        <div class="col-6">
+                            <div class="achievement-text">{{hist.achievement}}</div>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
+               <!-- {% endfor %} -->
             </div>
             {% endfor %}
         </div>
