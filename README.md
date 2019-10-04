@@ -4,11 +4,9 @@ This project is a productivity website. Instead of a user crossing out tasks the
 
 ### User Stories
 
-As a user type, I want to perform an action, so that I can achieve a goal. 
-
 - As a self employed worker, I want a productivity app that will help me recognise the unpredictable tasks that I achieve each day, in order to realise and appreciate my progress.  
 
-This website enables a user to add the tasks they have just completed, so accomodates tasks which the user wouldnt have added to their to do list.  
+This website enables a user to add the tasks they have just completed, so accommodates tasks which the user wouldn't have added to their to do list.  
 
 - As a entrepreneur, I want a new kind of productivity app because I havent had success getting motivated with using to do list apps, in order to stay motivated and productive.
 
@@ -26,31 +24,39 @@ What Ive Done records the time someone entered an achievement so a user can see 
 
 Wireframes are inside the assets/wireframes folder.
 
-UX
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+## Features
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-
-As a user type, I want to perform an action, so that I can achieve a goal.
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
-
-Features
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
-Existing Features
-Feature 1 - allows users X to achieve Y, by having them fill out Z
-...
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+### Existing Features
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+- History page - allows users to review their progress over a longer period of time than just the current date.
 
-Features Left to Implement
-Another feature idea
-Technologies Used
+### Future Features 
+
+- Sorting achievements into categories and being able to filter to only view those, both in the today page and in the history page
+- Total number of achievements so far displayed on today page
+- User information generated - for example, to calculate for the user their most productive hours, on average.
+
+## Technologies Used
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
-JQuery
-The project uses JQuery to simplify DOM manipulation.
+[JQuery](https://jquery.com/)
+- The project uses JQuery to simplify DOM manipulation.
+
+[Coolers](https://coolors.co/)
+- I used Coolers for the colour scheme.
+
+[Google Fonts](https://fonts.google.com/)
+- For the fonts used in the site.
+
+[Sass CSS Preprocessor](https://sass-lang.com/)
+- I used Sass (SCSS) to write css more concicely and more adaptable later.
+
+[Bootstrap](https://getbootstrap.com/)
+
+[FontAwesome](https://fontawesome.com/)
+
 Testing
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
@@ -92,8 +98,3 @@ Note somewhere about:
 any passwrods commited to github were because of debuggingwith CI, have been changed now
 
 Deployed version has open access 0.0.0.0. etcin order that testers can view it. //acgtually i guess i need to check with tutors what i would actually do about that!
-
-### Color Scheme
-Using Coolors. (https://coolors.co/)
-font - using google fonts - https://fonts.google.com/
-css - using sass preprocesssor
