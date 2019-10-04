@@ -11,6 +11,7 @@ $light-blue: #3D52D5;
 $accent-green: #64DB3F;
 $background-pale: #F3F9D2;
 $bpt:#CEF8FA; /*Background pale tint*/
+$darker-bpt: #ABCECF;
 $text-dark: #474350;
 /*Add tints for all these colors, for shadows / accents within the section / hover / etc. */
 
@@ -26,6 +27,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
+    text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,6 +42,7 @@ footer {
     background-color: $light-blue;
     margin-top:20px;
     padding-top:20px;
+    text-align:center;
 }
 
 .footer-icon {
@@ -62,7 +65,29 @@ footer {
 /*Today Page: */
 
 .time-from-db, .achievement-text {
-    background-color:$bpt;
     font-family: $content-font;
     margin:10px;
+}
+
+/*Achievements - Today and History Page */
+
+.achievement {
+    border-radius:15px;
+    background-color: $bpt;
+    margin:10px;
+}
+.achievement-text, .time-from-db, .achievement-date {
+    font-family: $content-font;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 10px 3px;
+}
+
+.achievement-text {
+    background-color: $bpt;
+}
+
+.time-from-db, .achievement-date {
+    background-color:$darker-bpt;
+    text-align: center;
 }
