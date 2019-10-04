@@ -46,10 +46,10 @@
             <!--Generate from Mongo, each document is a new row -->
             <div class="container">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-4">
                         <div class="time-from-db">{{achievement.time}}</div>
                     </div>
-                    <div class="col-9">
+                    <div class="col-8">
                         <div class="achievement-text">{{achievement.achievement}}</div>
                     </div>
                 </div>
@@ -61,18 +61,20 @@
 </div>
 
 <div class="container">
-    <form class="enter-achievement" action="/add_achievement" method="POST">
     <div class="row">
-        <div class="offset-2 col-4 offset-sm-2 col-sm-2">
-            <textarea name="achievement" placeholder="Enter Your Achievement" required></textarea>
-        </div>
-        <input type="text" id="time" name="time" class="hide" value=""/>
-        <input type="text" id="date" name="date" class="hide" value=""/>
-        <div class="col-2">
-            <button onclick="generateTime()" class="submit-button">+</button>
+        <div class="col-12">
+            <form class="enter-achievement" action="/add_achievement" method="POST">
+                <div class="offset-2 col-4">
+                    <textarea name="achievement" placeholder="Enter Your Achievement" required></textarea>
+                </div>
+                <input type="text" id="time" name="time" class="hide" value=""/>
+                <input type="text" id="date" name="date" class="hide" value=""/>
+                <div class="col-2">
+                    <button onclick="generateTime()" class="submit-button">+</button>
+                </div>
+            </form>
         </div>
     </div>
-    </form>
 </div>
 <script type="text/javascript" src="{{ url_for('static', filename='js/today.js') }}"></script>
 {% endblock %}
