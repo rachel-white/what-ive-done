@@ -64,14 +64,18 @@
     <div class="row">
         <div class="col-12">
             <form class="enter-achievement" action="/add_achievement" method="POST">
-                <div class="offset-2 col-4">
-                    <textarea name="achievement" placeholder="Enter Your Achievement" required></textarea>
+                <div class="container">
+                    <div class="row">
+                         <div class="offset-2 col-4 col-md-6">
+                            <textarea name="achievement" placeholder="Enter Your Achievement" required></textarea>
+                        </div>
+                        <div class="col-2">
+                            <button onclick="generateTime()" class="submit-button">+</button>
+                        </div>
+                    </div>
                 </div>
                 <input type="text" id="time" name="time" class="hide" value=""/>
                 <input type="text" id="date" name="date" class="hide" value=""/>
-                <div class="col-2">
-                    <button onclick="generateTime()" class="submit-button">+</button>
-                </div>
             </form>
         </div>
     </div>
