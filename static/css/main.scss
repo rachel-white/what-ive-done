@@ -6,7 +6,7 @@ $content-font: 'Dosis', sans-serif;
 
 /*Colours: */
 
-$dark-blue: #0E34A0;
+$dark-blue: #5CA7E6;
 $light-blue: #3D52D5;
 $accent-green: #64DB3F;
 $background-pale: #F3F9D2;
@@ -67,6 +67,15 @@ footer {
 .time-from-db, .achievement-text {
     font-family: $content-font;
     margin:10px;
+}
+
+textarea {
+    height:100%;
+    width:100%;
+}
+
+.submit-button {
+    margin-left: -25px;
 }
 
 /*Achievements - Today and History Page */
