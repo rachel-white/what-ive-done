@@ -33,19 +33,24 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-10 offset-sm-1 col-md-12">
+            <div class="col-12 col-sm-10 col-md-12">
                 <form class="username-create" action="/today" method="POST">
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
                                 <p class="username-warning">When choosing a username, please use a combination of names and numbers to minimise the chance of a duplicate username.</p>
                             </div>
-                            <div class="offset-2 col-6 offset-md-3 col-md-4">
-                                <input id="username" name="username" type="text" placeholder="Create Your Username" required>
-                            </div>
-                            <div class="col-2">
-                                <button onsubmit="location.href=&quot;{{ url_for('today') }}&quot;" name="submit" type="submit" formmethod="POST">Enter</button>
+                            
+                            <div class="container">
+                                <div class="row">
+                                    <div class="offset-2 col-6 offset-md-3 col-md-4">
+                                        <input id="username" name="username" type="text" placeholder="Create Your Username" required>
+                                    </div>
+                                    <div class="col-2">
+                                        <button onsubmit="location.href=&quot;{{ url_for('today') }}&quot;" name="submit" type="submit" formmethod="POST">Enter</button>
                                 <!--Button onsubmit href uses &quot; because triple nesting quotes - and &quot; needs to be outside the jinja-->
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -56,7 +61,7 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-10 offset-1"><p>If you already have an account, enter your username here:</p></div>
+            <div class="col-8 offset-2"><p>If you already have an account, enter your username here:</p></div>
         </div>
         <div class="row">
             <div class="col-12">
@@ -66,7 +71,6 @@
                             <div class="col-6 offset-2 offset-md-3 col-md-4">
                                 <input id="username" name="username" type="text" placeholder="Enter Your Username" required>
                             </div>
-                            
                             <div class="col-2">
                                 <button onsubmit="location.href=&quot;{{ url_for('today') }}&quot;" name="submit" type="submit">Enter</button>
                             </div>
