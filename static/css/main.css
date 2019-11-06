@@ -6,14 +6,15 @@
 /*Add tints for all these colors, for shadows / accents within the section / hover / etc. */
 /*CSS Styling: Overall rules for fonts, colors, footer. */
 body {
-  background-color: #0E34A0; }
+  background-color: #5CA7E6; }
 
 h1, h2, h3, h4, h5, h6, p {
   color: #474350;
   background-color: #F3F9D2;
   margin: 10px;
   padding: 10px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  text-align: center; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Lexend Deca", sans-serif; }
@@ -24,11 +25,13 @@ p, span, footer {
 footer {
   background-color: #3D52D5;
   margin-top: 20px;
-  padding-top: 20px; }
+  padding-top: 20px;
+  text-align: center; }
 
 .footer-icon {
   background-color: #F3F9D2;
-  color: #474350; }
+  color: #474350;
+  margin: 5px; }
 
 .about-and-contact {
   position: absolute;
@@ -41,8 +44,33 @@ footer {
 
 /*Today Page: */
 .time-from-db, .achievement-text {
-  background-color: #CEF8FA;
   font-family: "Dosis", sans-serif;
   margin: 10px; }
+
+textarea {
+  height: 100%;
+  width: 100%; }
+
+.submit-button {
+  margin-left: -25px; }
+
+/*Achievements - Today and History Page */
+.achievement {
+  border-radius: 15px;
+  background-color: #CEF8FA;
+  margin: 10px; }
+
+.achievement-text, .time-from-db, .achievement-date {
+  font-family: "Dosis", sans-serif;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin: 10px 3px; }
+
+.achievement-text {
+  background-color: #CEF8FA; }
+
+.time-from-db, .achievement-date {
+  background-color: #ABCECF;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
